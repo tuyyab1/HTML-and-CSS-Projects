@@ -1,0 +1,19 @@
+.red-text p {
+  color: red;
+  text-align: center;
+}
+
+.blue-text p {
+  color: #3498db;
+  text-align: center;
+}
+
+.green-text p {
+  color: green;
+  text-align: center;
+}
+
+p {
+  color: purple;
+  text-align: center;
+}
