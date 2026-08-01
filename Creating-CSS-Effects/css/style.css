@@ -1,0 +1,189 @@
+/*NAVBAR*/
+.nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 4; /*sets the position of the navbar in the stack layer so it is on top*/
+}
+
+ul{
+    list-style-type: none;
+    /*removes the bullet points from the list items*/
+    background-color: #363636;
+    margin: -10px -10px 0px -10px;/*margin value order top, right, bottom and left*/
+    overflow: hidden; /*hides excess amrgin spacce expancding past
+    the browser window edge and prevents a left to right scroll*/
+    display: flex; 
+    align-items: center; /*centers the list items vertically*/
+}
+
+a{
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100px;
+    padding:30px;
+    text-align: center;
+    transition: background-color 0.4s ease-in;
+}
+
+/*NAVBAR ROLLOVER EFFECT*/
+a:hover, .dropdown:hover{
+    background-color: rgb(228, 159, 0);
+    color: rgb(49, 49, 49);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
+    transition: background-color 0.3s ease-in;
+}
+
+/*styles and hides the anhor links withon the images
+link div tag*/
+.rollover-menu{
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/*displays anchor elemnts when the user hovers their
+mouse over the images link*/
+.dropdown:hover .rollover-menu{
+    display: block;
+    
+}
+
+.rollover-menu a{
+    color: #363636;
+
+}
+
+.rollover-menu a:hover{
+    color: #ffffff;
+   
+}
+
+.rollover-menu a:hover:nth-child(1){
+    background-color: rgb(117, 20, 20);
+    
+}
+
+.rollover-menu a:hover:nth-child(2){
+    background-color: rgb(87, 7, 7);
+}
+
+.rollover-menu a:hover:nth-child(3){
+    background-color: rgb(48, 2, 2);
+}
+
+/*FOOTER*/
+footer{
+    background-color: #363636;
+    margin: 30px -10px -10px -10px;
+    overflow: hidden;
+    height: 70px;
+}
+
+.footer-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: rgb(228, 159, 0);
+    text-align: center;
+}
+
+/*IMAGES*/
+img{
+    width: 700px;
+    height: 550px;
+  
+}
+.image-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+   
+}
+
+#image3{
+    padding-bottom: 170px;
+}
+
+/*IMAGE ONE*/
+.overlay{
+    position: absolute;
+    width: 700px;
+    height: 550px;
+    background-color: rgba(90, 90, 90, 1);
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.overlay:hover{
+    opacity: 0.6;
+}
+
+/*IMAGE TWO*/
+.zoom{
+    transform: scale(1);
+    transition: transform 0.5s ease-out;
+    z-index: 3;
+}
+
+.zoom:hover{
+    transform: scale(1.5);
+    transition: 0.5s ease-out;
+}
+
+/*IMAGE THREE*/
+.circle{
+    position: relative;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.circle::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: burst-reverse 1s;
+
+}
+
+.circle:hover::before{
+    animation: burst 1s;
+    animation-fill-mode: forwards;
+   
+}
+
+/*creates agrowing circle effect*/
+@keyframes burst{
+    0%{
+        opacity: 0.7;
+        background-color: rgb(224, 224, 224);
+        width: 300%;
+        height: 300%;
+    }
+}
+
+@keyframes burst-reverse{
+    0%{
+        opacity: 0.7;
+        background-color: rgb(224, 224, 224);
+        width: 300%;
+        height: 300%;
+    }
+    100%{
+        opacity: 0.2;
+        background-color: rgb(224, 224, 224);
+       
+    }
+}
