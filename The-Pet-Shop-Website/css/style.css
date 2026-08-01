@@ -1,0 +1,314 @@
+
+/* Import link for the Robot font from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*imported the top link for the mukta font from fonts.google.com*/
+
+body{
+    background-color: white;
+    overflow-x: hidden; /*prevents horizontal scroll bar from appearing on the page*/
+}
+    background-color: white;
+
+
+/*NAVBAR*/
+
+li{
+    display: inline;
+    padding: 25px;
+   
+}
+
+a{
+    font-family: 'Roboto', sans-serif;  /* font used from fonts.google.com*/
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 1px .5px 4px rgba(46, 31, 31, 0.5);
+    color: white;
+    text-decoration: none; /*removes the underline from the links*/
+}
+
+a:hover{
+    color: #d7eaf7; /*changes the color of the links when hovered over*/
+
+}
+
+.nav-bar{
+    background-color: #216391;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*the following minus margins stretch the navbar background beyond the web browswer screen edge*/
+    margin-top: -8px;
+    margin-left: -10px;
+    margin-right: -10px;
+    position: sticky; /*keeps the navbar at the top of the page when scrolling down*/
+    top: 0; /*keeps the navbar at the top of the page when scrolling down*/
+    z-index: 9; /*sts the stack layer of the navbar to scroll over all elemnents on the page*/
+}
+
+/*Creates a line under the Home and Contact links to seperate them from the images links*/
+#nav-border{
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ffffff;
+}
+
+/*HEADERS*/
+h1, h2, h3{
+    color: #0a3f63;
+    text-align: center;
+    font-family: "Roboto", sans-serif; /* font used from fonts.google.com*/
+    text-shadow: 1px .5px 4px rgba(0, 0, 0, 0.5);
+    margin: 0px;
+}
+
+h1{
+    font-size: 60px;
+    margin-top: 50px;
+  
+}  
+
+h2{
+    font-size:45px  ;
+    margin-top: 20px;
+
+}
+
+h3{
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#contact-h3{
+    text-shadow: none;
+}
+
+/*Creates a text color chnage animation on the h1 tags for the
+home and contact page headers*/
+@keyframes color-text {
+    0% { color: #b5e1ff; }
+    25% { color: #0a3f63; }
+}
+
+/*Calls the animation by it's name in a CSS selector so it cam be applied to a specific HTML element */
+.animate-text{
+    animation: color-text 4s;
+
+}
+
+/*BODY CONTENT*/
+
+img{
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.column{
+    float: left;
+    width: 48%;   /*places the two images side by side on the page*/
+    padding: 10px;
+}
+
+/*Groups elements inside a div element together and forces any floating elements
+outside of the div under it with this class selector*/
+.container{
+    background-size: 100% !important;
+    margin: 0px -60px 50px -40px;
+    padding-top: 5px; /*Padding will add an inline soace so the elements
+    don't sit on the edge of the div*/
+    padding-bottom: 10px;  
+}
+/*this part of the .container class selector to format the elements
+to display in a table like format*/
+
+.container::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Sets up the size of each div that holds an image so the image can be
+centered inside the div*/
+.image-container{
+    position: relative;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+/*Sets the backhround color in each div with an image and specifies
+which ones by the use of the id names for each image*/
+#cat {
+    background-color: #d7eaf7;
+}
+
+#dog{
+    background-color: #c3e0c5;
+}
+
+#rabbit{
+    background-color: #c3e0c5;
+
+}
+
+#guineapig{
+    background-color: #d7eaf7;
+}
+
+#fish{
+    background-color: #d7eaf7;
+}
+
+#reptile{
+    background-color: #c3e0c5;
+}
+
+/*sets up the properties for the overlay on each image*/
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 350px;
+    width: 500px;
+    margin-top: 50px;
+    border-radius: 10px;
+    opacity: 0.6; 
+    background-color: rgba(0, 0, 0);
+}
+
+/*The :hover pseudo-class triggers the overlay class to 60% opcacity when a user 
+hovers their mouse over an image*/
+.overlay:hover{
+    opacity: 0.6;
+}
+
+/*this selector targets the video on the page*/
+iframe{
+    display: table;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+}
+
+/*Styles the div element that holds the video*/
+#video{
+    background-color: #c3e0c5;
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+
+footer{
+    background-color: #216391;
+    margin-top: 50px;
+    /*negative margins stretch the footer background beyond the web browser screen 
+    edge on the left and right*/
+    margin-left: -10px;
+    margin-right: -10px;
+    bottom: 0; /*positions the footer on the bottom of the screen*/
+}
+
+/*Styles the table elements within the footer tags*/
+table{
+    width: 100%;
+}
+
+td{
+    text-align: center;
+    width: 33%; /*we divide the three columns equally so that each column
+    takes upto 1.3 of the browser width*/
+
+    
+}
+
+td p{
+    font-family: 'Roboto', sans-serif;  /* font used from fonts.google.com*/
+    color: rgb(255, 255, 255)
+}
+
+/*FORM CSS*/
+form{
+    padding: 15px;
+    display: table;
+    margin: auto;
+    
+}
+
+input{
+    border: 2px solid rgb(165, 165, 165);
+    border-radius: 2px;
+    padding: 1px;
+    margin: 10px 15px 10px 0px;
+    font-size: 20px;
+    color: rgb(165, 165, 165);
+    transition: 0.3s ease-out;
+}
+
+/*The :focus pseudo-class is triggered when auser clicks on an inout element*/
+input:focus{
+    box-sizing: border-box;
+    transition: 0.3s ease-in;
+    outline: none; 
+    border: 2px solid #0a3f63;
+    color: #000000;
+}
+
+/*styles the label tag on the contact form*/
+label{
+    font-family: 'Roboto', sans-serif;  /* font used from fonts.google.com*/
+    font-size: 20px;
+    margin: 10px;
+}
+
+/*the type selector for the textarea element for a user to
+write a message*/
+textarea{
+    width: 100%;
+    height: 200px;
+    border: 3px solid rgb(165, 165, 165);
+    border-radius: 4px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    background: #ffffff;
+    font-family: 'Roboto', sans-serif;  /* font used from fonts.google.com*/
+    font-size: 15px;
+    color: rgb(165, 165, 165);
+    resize: both;
+    transition: 0.3s ease-out;
+}
+
+/*applies different styling to the textarea when users trigger the :focus pseudo-class by clicking
+on it*/
+textarea:focus{
+    box-sizing: border-box;
+    transition: 0.3s ease-in;
+    outline: none; 
+    border: 3px solid #0a3f63;
+    color: #000000;
+}
+
+/*styles the submit button on the contact form*/
+input[type=submit]{
+    background-color: #0a3f63;
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;  /* font used from fonts.google.com*/
+    font-size: 20px;
+    margin: 4px 2px;
+    float: right;
+}
+
+
+/*changes the backround color of the submit button when a user hovers over it*/
+input[type=submit]:hover{
+    background-color:  #052133;
+
+}
+
