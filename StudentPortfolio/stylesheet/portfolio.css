@@ -285,3 +285,148 @@ form {
     font-family: "Trebuchet MS", Optima;
 }
 /***** END OF CONTACT FORM STYLING *****/
+
+/***** SLIDESHOW STYLING *****/
+#Slideshow {
+    padding-top: 60px;
+    text-align: center;
+}
+
+#Slideshow_Container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.Slideshow_Images {
+    width: 100%;
+}
+
+.text {
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 12px;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.Previous:hover, .Next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+/***** END OF SLIDESHOW STYLING *****/
+
+/***** POPUP CONTACT FORM STYLING *****/
+.Pop_Up_Button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 200px;
+    z-index: 2;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.form-container input[type=text] {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 15px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 18px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.form-container .cancel {
+    background-color: #f44336;
+}
+
+.form-container .btn:hover, .Pop_Up_Button:hover {
+    opacity: 1;
+}
+/***** END OF POPUP CONTACT FORM STYLING *****/
