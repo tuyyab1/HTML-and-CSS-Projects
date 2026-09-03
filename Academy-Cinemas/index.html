@@ -242,6 +242,54 @@
             </div>
         </div>
     </section>
+
+    <!--
+        MOVIE DEALS (NEW BOOTSTRAP COMPONENT)
+        This section uses Bootstrap's "card" component (same pattern as the
+        Tickets section above) to display 3 combo deals side by side.
+        "d-flex flex-row flex-wrap" makes the cards sit in a row and wrap
+        onto a new line automatically on smaller screens.
+    -->
+    <section>
+        <div class="container spacer" id="movie-deals">
+            <h1>Movie Deals</h1>
+            <div class="d-flex flex-row flex-wrap">
+                <!--FAMILY PACK DEAL-->
+                <div class="col">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Family Pack</h5>
+                            <!-- card-text holds the deal description -->
+                            <p class="card-text">4 Tickets + 2 Large Popcorns + 4 Drinks</p>
+                            <!-- lead class makes the price stand out visually -->
+                            <p class="lead">$49.99</p>
+                        </div>
+                    </div>
+                </div>
+                <!--DATE NIGHT DEAL-->
+                <div class="col">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Date Night</h5>
+                            <p class="card-text">2 Tickets + 1 Large Popcorn + 2 Drinks</p>
+                            <p class="lead">$24.99</p>
+                        </div>
+                    </div>
+                </div>
+                <!--STUDENT SPECIAL DEAL-->
+                <div class="col">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Student Special</h5>
+                            <p class="card-text">1 Ticket + 1 Small Popcorn + 1 Drink</p>
+                            <p class="lead">$12.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!--CONTACT FORM-->
     <section>
         <div class="container" id="contact">
